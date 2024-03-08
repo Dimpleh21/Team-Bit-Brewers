@@ -7,7 +7,7 @@ def get_img_as_base64(file):
     with open(file,"rb") as f:
         data=f.read()
     return base64.b64encode(data).decode()
-get_img_as_base64("dna.jpg")
+get_img_as_base64("dna10.jpg")
 
 
 
@@ -16,9 +16,38 @@ st.markdown(
     <style>
     /* Set font family and size */
     .my-text {
-        font-family: "K2D", sans-serif;
-        font-size: 60px;
-        justify-content: center;
+        font-family:'poppins';
+        font-size: 75px;
+        
+    }
+
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <style>
+    /* Set font family and size */
+    .text-container {
+    position: relative;
+        width: 1000px;
+        left: -10%;
+    }
+
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <style>
+    /* Set font family and size */
+    .element-container.st-emotion-cache-1vae0mb.e1f1d6gn4 {
+    
+        left: 50%;
     }
 
     
@@ -29,7 +58,8 @@ st.markdown(
 
 
 # Text content with custom class
-st.markdown('<div class="text-container"><span class="my-text">WE START WHERE THE WORLD STOPS</span></div>', unsafe_allow_html=True)
+st.markdown('<div class="text-container"><span class="my-text">WE START WHERE THE</span></div>', unsafe_allow_html=True)
+st.markdown('<div class="text-container"><span class="my-text">WORLD STOPS.</span></div>', unsafe_allow_html=True)
 st.markdown(
     """
     <style>
@@ -74,8 +104,9 @@ st.markdown(
     .my-text{
         position: relative;
         top: 10%;
-        left: 10%;
+        left: 5%;
         transform: translate(-50%, -200%);
+        
         
     }
     </style>
@@ -103,7 +134,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('dna.jpg')
+set_png_as_page_bg('dna10.jpg')
 st.markdown(
     """
     <style>
@@ -113,6 +144,7 @@ st.markdown(
         height: 40px;
         width: 240px;
         top: 50%;
+        left: -10%;
         background-color: #304766;
         
     }
@@ -120,4 +152,24 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+st.write("Get Your CT Scans Analysed")
+# st.markdown(
+#     """
+#     <style>
+#     .container {
+#         position: relative;
+#         border: 1px solid #ddd;
+#         border-radius: 5px;
+#         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#         padding: 20px;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+# # Content inside the bordered container
+# st.markdown("<div class='container'>This is a bordered container.</div>", unsafe_allow_html=True)
+
+
 
