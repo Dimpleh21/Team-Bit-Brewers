@@ -61,6 +61,7 @@ st.markdown(
         top: 120%;
         left: 90%;
         transform: translate(-50%, 400%);
+        
     }
     </style>
     """,
@@ -72,10 +73,10 @@ st.markdown(
     /* Position the button */
     .my-text{
         position: relative;
-        top: 50%;
-        left: -20%;
-        transform: translate(-50%, -50%);
-        color
+        top: 10%;
+        left: 10%;
+        transform: translate(-50%, -200%);
+        
     }
     </style>
     """,
@@ -103,4 +104,20 @@ def set_png_as_page_bg(png_file):
     return
 
 set_png_as_page_bg('dna.jpg')
+st.markdown(
+    """
+    <style>
+    /* Position the button */
+    .st-emotion-cache-19rxjzo.ef3psqc12{
+        position: relative;
+        height: 40px;
+        width: 240px;
+        top: 50%;
+        background-color: #304766;
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
