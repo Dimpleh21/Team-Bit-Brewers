@@ -41,8 +41,51 @@ import tensorflow as tf
 # Streamlit app
 
 st.set_page_config(page_title='Disease Detection',page_icon='🧊',initial_sidebar_state="expanded")
-uploaded_image = st.file_uploader("Choose an image...", type="jpg")
+st.title("Dementia Detection")
+uploaded_image = st.file_uploader("Choose your CT scan Report", type="jpg")
+st.markdown(
+    """
+    <style>
+    /* Position the button */
+    .main.st-emotion-cache-uf99v8.ea3mdgi8{
+        position: relative;
+        
+        background-color: #172130;
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+st.markdown(
+    """
+    <style>
+    /* Position the button */
+    .st-emotion-cache-1erivf3.e1b2p2ww15{
+        position: relative;
+        background-color: rgb(14, 17, 23);
+        border: 0.3px solid #ffffff;
+        
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <style>
+    /* Position the button */
+    .st-emotion-cache-6qob1r.eczjsme3{
+        
+        background-color: rgb(14, 17, 23);
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
@@ -50,7 +93,7 @@ if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
-    st.write("Classifying...")
+    st.write("Detecting Dementia...")
 
     # Use the CNN models to make predictions on the uploaded image
     pneumonia_prediction = predict_pneumonia(image)
@@ -59,5 +102,5 @@ if uploaded_image is not None:
     st.write(f"Pneumonia Prediction: {pneumonia_prediction}")
     st.write(f"Other Disease Prediction: {other_disease_prediction}")
     
-
+  
    

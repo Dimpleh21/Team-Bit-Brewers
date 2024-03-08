@@ -40,21 +40,11 @@ import tensorflow as tf
 
 # Streamlit app
 st.set_page_config(page_title='Disease Detection',page_icon='🧊',initial_sidebar_state="expanded")
-st.title('Disease Detection')
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('dna.jpg');
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.title('Pneumonia Detection')
 
-uploaded_image = st.file_uploader("Choose an image...", type="jpg")
-st.write('WE START WHERE THE WORLD STOPS')
+
+uploaded_image = st.file_uploader("Choose your CT scan report", type="jpg")
+
 
 
 

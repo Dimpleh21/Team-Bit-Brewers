@@ -7,7 +7,7 @@ def get_img_as_base64(file):
     with open(file,"rb") as f:
         data=f.read()
     return base64.b64encode(data).decode()
-get_img_as_base64("dna10.jpg")
+get_img_as_base64("dna4.jpg")
 
 
 
@@ -16,7 +16,9 @@ st.markdown(
     <style>
     /* Set font family and size */
     .my-text {
-        font-family:'poppins';
+        
+        font-family: 'Arial';
+        font-weight: 800;
         font-size: 75px;
         
     }
@@ -33,7 +35,8 @@ st.markdown(
     .text-container {
     position: relative;
         width: 1000px;
-        left: -10%;
+        height: 150px;
+        left: -20%;
     }
 
     
@@ -58,8 +61,8 @@ st.markdown(
 
 
 # Text content with custom class
-st.markdown('<div class="text-container"><span class="my-text">WE START WHERE THE</span></div>', unsafe_allow_html=True)
-st.markdown('<div class="text-container"><span class="my-text">WORLD STOPS.</span></div>', unsafe_allow_html=True)
+st.markdown('<div class="text-container"><span class="my-text">WE START WHERE THE WORLD STOPS.</span></div>', unsafe_allow_html=True)
+
 st.markdown(
     """
     <style>
@@ -80,7 +83,7 @@ button_container = st.markdown(
     unsafe_allow_html=True
 )
 if button_clicked:
-    st.switch_page("pages/Dashboard.py")
+    st.switch_page("pages/Dementia Predictor.py")
 
 st.markdown(
     """
@@ -134,7 +137,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('dna10.jpg')
+set_png_as_page_bg('dna4.jpg')
 st.markdown(
     """
     <style>
@@ -145,14 +148,14 @@ st.markdown(
         width: 240px;
         top: 50%;
         left: -10%;
-        background-color: #304766;
+        background-color: #172130;
         
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-st.write("Get Your CT Scans Analysed")
+st.subheader("GET YOUR CT SCANS ANALYSED")
 # st.markdown(
 #     """
 #     <style>
@@ -171,5 +174,22 @@ st.write("Get Your CT Scans Analysed")
 # # Content inside the bordered container
 # st.markdown("<div class='container'>This is a bordered container.</div>", unsafe_allow_html=True)
 
-
-
+st.markdown(
+    """
+    <style>
+    /* Position the button */
+    .st-emotion-cache-10trblm.e1nzilvr1{
+        position: relative;
+        left: 20%;
+        font-style: 'Arial';
+        font-weight: 800;
+        
+        
+        
+        
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
