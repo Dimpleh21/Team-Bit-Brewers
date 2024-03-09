@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-import tensorflow as tf
 
 # # Load the pre-trained CNN models
 # /*pneumonia_model = tf.keras.models.load_model('pneumonia_detection_model.h5')

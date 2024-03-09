@@ -10,7 +10,6 @@ def get_img_as_base64(file):
 get_img_as_base64("dna4.jpg")
 
 
-
 st.markdown(
     """
     <style>
@@ -193,3 +192,97 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+#with st.container():
+ #   st.write("---")
+ #   st.header("Get In Touch With Me!")
+ #   st.write("##")
+
+
+  #  contact_form = """
+  #  <form action="https://formsubmit.co/22bms037@nith.ac.in" method="POST">
+  #   <input type="hidden" name="_captcha" value="false">
+  #   <input type="text" name="name" placeholder="Your Name" required>
+  #   <input type="email" name="email" placeholder="Your email" required>
+   #  <textarea nmae="message" placeholder="Your message here" required></textarea>
+   #  <button type="submit">Send</button>
+   # </form>
+   # """
+
+
+   # left_column, right_column = st.columns(2)
+   # with left_column:
+   #     st.markdown(contact_form, unsafe_allow_html=True)
+   # with right_column:
+   #     st.empty()
+
+
+
+def main():
+    st.title("Contact Form")
+
+    # CSS styling
+    st.markdown(
+        """
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f4;
+            }
+            .container {
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            label {
+                font-weight: bold;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Contact form
+    with st.container():
+        name = st.text_input("Name", "")
+        email = st.text_input("Email", "")
+        message = st.text_area("Message", "")
+        submit_button = st.button("Submit")
+
+    if submit_button:
+        # You can add your backend logic for handling the form data here
+        st.success("Form submitted successfully!")
+
+if __name__ == "__main__":
+    main()
+    
+
+
+
+
+
+
+
